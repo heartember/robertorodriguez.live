@@ -990,6 +990,173 @@ input::placeholder, textarea::placeholder{
 .dimension:nth-child(3) { transition-delay: 0.3s; }
 .dimension:nth-child(4) { transition-delay: 0.4s; }
 
+
+
+/* -----------------------------
+  Make it sing: Rhythm + Type
+------------------------------ */
+
+body{
+  text-rendering: optimizeLegibility;
+}
+
+.hero{
+  padding: 76px 0 34px;
+}
+
+.hero__lede{
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.section__subhead{
+  font-size: 16.5px;
+  line-height: 1.65;
+}
+
+.card p, .mini p, .service p, details p{
+  line-height: 1.7;
+}
+
+.section{
+  position: relative;
+}
+
+/* Subtle grain overlay for depth (very light) */
+.section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.06;
+  mix-blend-mode: overlay;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+}
+
+/* Figures */
+.figure{
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.figure__img{
+  width: 100%;
+  height: auto;
+  display:block;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: var(--shadow);
+}
+.figure__cap{
+  color: var(--faint);
+  font-size: 13px;
+  letter-spacing: .01em;
+  padding-left: 2px;
+}
+.figure--hero .figure__img{
+  border-radius: 30px;
+}
+
+/* Let certain images breathe wider than the text */
+.figure--bleed{
+  margin: 18px 0 10px;
+}
+@media (min-width: 980px){
+  .figure--bleed{
+    width: calc(100% + 120px);
+    margin-left: -60px;
+    margin-right: -60px;
+  }
+}
+
+/* Softer quote treatment */
+.quote{
+  background: linear-gradient(140deg, rgba(183,243,209,.08), rgba(255,255,255,.02));
+  border-color: rgba(255,255,255,.12);
+}
+.quote p{
+  font-size: 19px;
+}
+
+/* Breath dividers for pacing */
+.breath{
+  text-align:center;
+  color: rgba(255,255,255,.35);
+  letter-spacing: .35em;
+  margin: 18px 0 18px;
+  user-select:none;
+}
+
+/* Make lists feel more intentional */
+.list li{
+  margin: 9px 0;
+}
+.list strong{
+  color: rgba(255,255,255,.9);
+}
+
+/* Service cards: slightly more editorial */
+.service{
+  padding: 20px;
+  border-radius: 20px;
+}
+.service h3{
+  font-family: Fraunces, serif;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+.pill{
+  transform: translateY(-1px);
+}
+
+/* Event cards: improve hierarchy */
+.event{
+  padding: 18px;
+  border-radius: 20px;
+}
+.event__meta{
+  border-right: 1px solid rgba(255,255,255,.10);
+  padding-right: 10px;
+}
+@media (max-width: 920px){
+  .event__meta{
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.10);
+    padding-bottom: 10px;
+  }
+}
+
+/* Buttons: slightly more tactile */
+.btn{
+  border-radius: 16px;
+}
+.btn--primary{
+  box-shadow: 0 14px 34px rgba(0,0,0,.35);
+}
+
+/* Hero image block: tighten */
+.hero__media{
+  align-self: stretch;
+}
+.figure--hero{
+  height: 100%;
+}
+.figure--hero .figure__img{
+  height: 100%;
+  object-fit: cover;
+  min-height: 430px;
+}
+
+@media (max-width: 920px){
+  .figure--hero .figure__img{
+    min-height: 340px;
+  }
+}
+
+
+
 /* -----------------------------
   Responsive
 ------------------------------ */
