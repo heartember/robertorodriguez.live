@@ -5,320 +5,642 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Roberto Rodriguez | Coaching & Consulting for Systemic Change</title>
-  <meta name="description" content="Coaching & consulting for systemic change. Work together toward justice, collective liberation, and relational skill." />
+  <meta name="description" content="Coaching & consulting for systemic change. Support for leaders, teams, and communities working for justice, collective liberation, and relational skill." />
   <link rel="canonical" href="https://robertorodriguez.live/" />
 
-  <!-- Fonts -->
+  <!-- Fonts - Distinctive pairing -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Darker+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Darker+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" id="top">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Home">
+  <!-- Topbar -->
+  <header class="topbar" role="banner">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Roberto Rodriguez home">
         <span class="brand__mark" aria-hidden="true">RR</span>
-        <span class="brand__text">Roberto Rodriguez</span>
+        <span class="brand__text">
+          <span class="brand__name">Roberto Rodriguez</span>
+          <span class="brand__tag">Coaching & Consulting</span>
+        </span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
-          <span class="nav__toggle-lines" aria-hidden="true"></span>
-          <span class="sr-only">Menu</span>
-        </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="sr-only">Open menu</span>
+      </button>
 
-        <ul class="nav__menu" id="navMenu">
-          <li><a href="#working-together">Working Together</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#approach">Approach</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a class="btn btn--small" href="#contact">Let’s Connect</a></li>
-        </ul>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="#working-together">Working Together</a>
+        <a href="#services">Services</a>
+        <a href="#approach">My Approach</a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a class="nav__cta" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero section">
-      <div class="container hero__inner">
-        <div class="hero__content fade-in">
-          <p class="eyebrow">Coaching & Consulting</p>
-          <h1 class="hero__title">Coaching & Consulting for Systemic Change</h1>
-          <p class="lead">
-            I work with individuals, teams, and organizations seeking to transform how they
-            relate—to each other, to power, to conflict, and to the systems shaping their lives and work.
+    <!-- HERO -->
+    <section id="top" class="hero hero--landscape">
+      <div class="hero__background">
+        <img src="images/nature-land-connection.webp" alt="Landscape layers" class="hero__background-img" />
+        <div class="hero__overlay"></div>
+      </div>
+      
+      <div class="container hero__content">
+        <div class="hero__copy">
+          <p class="eyebrow">All about relationship</p>
+          <h1 class="hero__title">
+            Coaching & Consulting<br />
+            for <span class="accent">Systemic Change</span>
+          </h1>
+
+          <p class="hero__lede">
+            This site is a portal for conversation and collaboration. I support <strong>BIPOC/PGM communities working for systemic change</strong>, and <strong>teams working for justice and collective liberation</strong>—committed to working together with integrity, care, and purpose.
           </p>
 
-          <div class="hero__cta">
-            <a class="btn" href="#contact">Book a discovery call</a>
-            <a class="btn btn--ghost" href="#working-together">Learn more</a>
+          <p class="hero__lede">
+            My work lives in the space between <strong>personal healing</strong> and <strong>collective transformation</strong>—helping leaders, groups, and organizations meet conflict, change, and complexity with depth to skill.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">Let's begin the conversation</a>
+            <a class="btn btn--ghost" href="#services">Explore offerings</a>
           </div>
 
-          <div class="hero__meta">
-            <div class="pill">Relational skill</div>
-            <div class="pill">Collective liberation</div>
-            <div class="pill">Somatic practice</div>
+          <div class="hero__note">
+            <p class="small">
+              <strong>*BIPOC/PGM</strong> refers to Black, Indigenous, People of Color / People of the Global Majority
+            </p>
           </div>
-        </div>
-
-        <div class="hero__card fade-in" aria-label="Quick summary">
-          <h2 class="card__title">What we build together</h2>
-          <ul class="checklist">
-            <li>Clarity about what you’re navigating</li>
-            <li>Relational skill under real pressure</li>
-            <li>Capacity for conflict, repair, and change</li>
-            <li>Strategies aligned with values & impact</li>
-          </ul>
         </div>
       </div>
-      <div class="hero__glow" aria-hidden="true"></div>
     </section>
 
-    <section class="section" id="working-together">
+    <!-- WORKING TOGETHER -->
+    <section id="working-together" class="section">
       <div class="container">
         <header class="section__header">
           <h2>Working Together</h2>
-          <p class="muted">
-            I work with people doing meaningful work who want to expand their capacity—personally and collectively—
-            for complexity, conflict, and transformation.
+          <p class="section__subhead">
+            A Liberatory Offering for Teams, Leaders, and Movements
           </p>
         </header>
 
-        <div class="prose">
-          <p>
-            Whether you’re navigating organizational change, relational rupture, leadership challenges, or movement
-            dynamics, we’ll build the skills and practices to meet what’s here—without abandoning yourself or others.
-          </p>
-          <p>
-            My work draws from somatic practice, systems thinking, conflict transformation, and movement history.
-            Together we focus on real-world conditions: limited time, high stakes, mixed incentives, and human nervous systems.
-          </p>
+        <div class="intro-block">
+          <p>I support individuals, team leaders, and organizations navigating the space between healing and collective transformation. The ones I serve often live in these places:</p>
+          <ul class="styled-list">
+            <li>BIPOC/PGM communities engaged in systemic change for their own lives and futures</li>
+            <li>Teams working for justice and collective liberation</li>
+          </ul>
+          <p>Whether you're a leader tending to burnout, a team unraveling conflict, or a group longing for more ritual and cohesion—I offer support that's rooted in relational depth and systemic awareness.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Challenges We Meet Together</h3>
+            <ul class="list">
+              <li>Developing trauma-informed, power-conscious leadership</li>
+              <li>Opening up dialogue and repairing trust after tension</li>
+              <li>Navigating social rank and institutional dynamics with integrity</li>
+              <li>Strengthening team connection through somatic and ritual practices</li>
+            </ul>
+          </div>
+
+          <div class="card card--highlight">
+            <h3>Best outcomes come over time</h3>
+            <p>
+              While I'm able to support teams in moments of acute conflict or change, my work is most effective when we engage over time. I prioritize longer-term, developmental partnerships that build trust, deepen skills, and nurture sustainable transformation.
+            </p>
+          </div>
+        </div>
+
+        <!-- OUTCOMES -->
+        <div class="outcomes">
+          <h3 class="outcomes__title">Outcomes of our Work Together</h3>
+          
+          <div class="outcomes__grid">
+            <div class="outcome">
+              <div class="outcome__icon">🔍</div>
+              <h4>Personal Clarity and Self-Care</h4>
+              <ul>
+                <li>Identifying personal needs and long-term aspirations</li>
+                <li>Creating sustainable strategies for wellbeing</li>
+                <li>Practicing whole-body awareness and rhythms for capacity</li>
+              </ul>
+            </div>
+
+            <div class="outcome">
+              <div class="outcome__icon">🛠️</div>
+              <h4>Power Awareness and Navigation</h4>
+              <ul>
+                <li>Understanding social rank and power differences</li>
+                <li>Working across positionality with empathy and skill</li>
+              </ul>
+            </div>
+
+            <div class="outcome">
+              <div class="outcome__icon">🧘</div>
+              <h4>Embodied Practices</h4>
+              <ul>
+                <li>Integrating somatic awareness into leadership and collaboration</li>
+                <li>Tending to nervous systems with regenerative practices</li>
+              </ul>
+            </div>
+
+            <div class="outcome">
+              <div class="outcome__icon">🧑‍🤝‍🧑</div>
+              <h4>Relational & Communication Skills</h4>
+              <ul>
+                <li>Making offers and requests with clarity</li>
+                <li>Repairing after conflict in ways that strengthen cohesion</li>
+                <li>Cultivating spaces for truth-telling and vulnerability</li>
+              </ul>
+            </div>
+
+            <div class="outcome">
+              <div class="outcome__icon">🎓</div>
+              <h4>Learning Culture & Accountability</h4>
+              <ul>
+                <li>Building a learning ethos that honors change and wisdom</li>
+                <li>Practicing accountability that connects rather than fractures</li>
+              </ul>
+            </div>
+
+            <div class="outcome">
+              <div class="outcome__icon">🎭</div>
+              <h4>Cultural & Ritual Depth</h4>
+              <ul>
+                <li>Designing inclusive rituals for celebration, mourning, and reconnection</li>
+                <li>Grounding shared purpose in cultural belonging and ancestral memory</li>
+              </ul>
+            </div>
+
+            <div class="outcome">
+              <div class="outcome__icon">🔄</div>
+              <h4>Sustaining Long-Term Change</h4>
+              <ul>
+                <li>Resourcing movements for longevity and rest</li>
+                <li>Preventing burnout through intentional pacing and integration</li>
+              </ul>
+            </div>
+
+            <div class="outcome">
+              <div class="outcome__icon">🧩</div>
+              <h4>Intersectional Practice</h4>
+              <ul>
+                <li>Understanding how race, gender, class, ability, and many other social dynamics intersect</li>
+                <li>Applying analysis to team dynamics and community relationships</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-bar">
+          <p><strong>Every offering is a collaboration.<br>Every session is an intentional space for learning and change.</strong></p>
+          <a class="btn btn--primary" href="#contact">Let's Begin the Conversation</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="services">
+    <!-- SERVICES -->
+    <section id="services" class="section">
       <div class="container">
         <header class="section__header">
           <h2>Ways to Work Together</h2>
-          <p class="muted">A few common entry points. If you’re not sure, start with a discovery call.</p>
+          <p class="section__subhead">
+            Choose the kind of support that best fits your needs. Whether you're exploring personal growth, partnership dynamics, or collective transformation, I offer spaces for learning, healing, and collaboration.
+          </p>
         </header>
 
-        <div class="cards">
-          <article class="card">
-            <h3 class="card__title">Discovery Call</h3>
-            <p class="card__text">
-              A short conversation to understand what you’re navigating and whether my approach fits.
-            </p>
-            <a class="card__link" href="#contact">Request a time →</a>
+        <div class="services-grid">
+          <article class="service">
+            <h3>Discovery Call <span class="pill">Free</span></h3>
+            <p>An initial 20–30 minute conversation to share what you're looking for, ask questions, and see if we're a good fit to work together.</p>
           </article>
 
-          <article class="card">
-            <h3 class="card__title">1-on-1 Coaching</h3>
-            <p class="card__text">
-              For leaders, organizers, and practitioners building relational skill, strategy, and capacity.
-            </p>
+          <article class="service">
+            <h3>1-on-1 Coaching</h3>
+            <p>Personalized sessions for leaders, organizers, and changemakers seeking greater self-awareness, skill development, and embodied capacity to navigate conflict and complexity.</p>
           </article>
 
-          <article class="card">
-            <h3 class="card__title">Couples / Relationship Coaching</h3>
-            <p class="card__text">
-              For couples and partners navigating conflict, repair, intimacy, and the impact of systems on relationship.
-            </p>
+          <article class="service">
+            <h3>Couples/Partnership Coaching</h3>
+            <p>For pairs wanting to strengthen trust, deepen communication, navigate conflict, and align around shared values and purpose.</p>
           </article>
 
-          <article class="card">
-            <h3 class="card__title">Team / Org Consulting</h3>
-            <p class="card__text">
-              For teams working through culture, power, collaboration, conflict, and organizational learning.
-            </p>
+          <article class="service">
+            <h3>Team or Group Facilitation</h3>
+            <p>Support for teams, organizations, or community groups engaged in systemic change—building trust, addressing conflict, and cultivating generative collaboration.</p>
+          </article>
+
+          <article class="service">
+            <h3>Custom Workshops & Trainings</h3>
+            <p>Tailored learning experiences for groups and organizations committed to justice, collective liberation, and sustainable cultural change.</p>
           </article>
         </div>
 
-        <div class="callout">
-          <h3 class="callout__title">Outcomes of our work together</h3>
-          <ul class="columns">
-            <li>Greater capacity to stay present in conflict</li>
-            <li>Clearer boundaries without shutdown</li>
-            <li>More effective strategy and decision-making</li>
-            <li>Repair skills that build trust over time</li>
-            <li>Relational practices that scale to teams</li>
-            <li>Alignment between values and action</li>
-          </ul>
+        <div class="center">
+          <p class="ready-text">If you're ready to explore working together, let's begin the conversation.</p>
+          <a class="btn btn--primary" href="#contact">Schedule A Call</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="approach">
+    <!-- APPROACH -->
+    <section id="approach" class="section">
       <div class="container">
         <header class="section__header">
-          <h2>Approach</h2>
-          <p class="muted">A multi-level practice of relational wholeness: self, other, system.</p>
+          <h2>Relational Wholeness</h2>
+          <p class="section__subhead">My Approach to Coaching and Consulting</p>
         </header>
+
+        <div class="approach-intro">
+          <p><strong>Relational Wholeness</strong> is the path I walk and the framework I share. It describes the key areas of human experience where I offer support.</p>
+        </div>
+
+        <div class="approach-overview">
+          <h3>My Approach</h3>
+          <p>I help groups and organizations work at four interconnected levels for lasting change:</p>
+          <ul class="styled-list">
+            <li><strong>Personal:</strong> self-awareness, growth, and care.</li>
+            <li><strong>Interpersonal:</strong> communication, conflict transformation, relationship-building.</li>
+            <li><strong>Systemic:</strong> understanding and shifting social and institutional dynamics.</li>
+            <li><strong>Transpersonal:</strong> connecting to shared meaning, ritual, ancestral memory, and the living world.</li>
+          </ul>
+          <p>This integrated approach moves beyond quick fixes, building real depth, resilience, and capacity for change.</p>
+        </div>
+
+        <h3 class="dimensions-title">The Four Dimensions of Relational Wholeness</h3>
+        <p class="dimensions-intro">If I were to describe these levels as separate categories (which they are not), I would say this:</p>
 
         <div class="dimensions-with-image">
-          <div class="prose">
-            <p>
-              Relational wholeness is the ability to stay connected to yourself, to others, and to the larger system—
-              especially when conditions are challenging. We work at multiple levels:
-            </p>
+          <div class="dimensions">
+            <div class="dimension">
+              <h4>The Dreaming Body <span class="dimension-subtitle">(Inner Work & Healing)</span></h4>
+              <p>This is the realm of inner life—body, psyche, and personal history. Here we explore beliefs, patterns, nervous-system states, and personal traumas, while nurturing your deepest longings and gifts.</p>
+              <p>My coaching supports you to work compassionately with your internal systems so you can align your actions and practices with your most life-affirming values and goals.</p>
+            </div>
 
-            <ul>
-              <li><strong>Somatic:</strong> what your nervous system is doing and why it matters</li>
-              <li><strong>Relational:</strong> communication, boundaries, repair, and trust</li>
-              <li><strong>Systemic:</strong> power, history, institutions, incentives, and culture</li>
-            </ul>
+            <div class="dimension">
+              <h4>The Space Between Us <span class="dimension-subtitle">(Relational Practice)</span></h4>
+              <p>This is the field of relationship—where we meet friends, family, colleagues, and communities. Here, we practice the art of connection: finding common ground, collaborating, celebrating, and navigating conflict.</p>
+              <p>My coaching and consulting help individuals, couples, groups, and organizations identify the influences shaping their dynamics and build more generative, collaborative ways of working together.</p>
+            </div>
 
-            <p>
-              My orientation is grounded, practical, and anti-performative. We focus on what works in real relationships—
-              not what sounds good.
-            </p>
+            <div class="dimension">
+              <h4>The Liberation Promise <span class="dimension-subtitle">(Systems & Social Change)</span></h4>
+              <p>This path explores freedom from oppressive patterns while embracing healthier, life-giving alternatives in culture, institutions, and social systems.</p>
+              <p>My work supports individuals and organizations to recognize the often-invisible forces that shape our perspectives and behaviors, and to co-create new, liberatory ways of being, relating, and organizing.</p>
+            </div>
+
+            <div class="dimension">
+              <h4>The Dreaming World <span class="dimension-subtitle">(Non-Ordinary States & Wisdom)</span></h4>
+              <p>This is the realm of imagination, altered states, and non-ordinary perceptions—a domain well-known to traditional healers and mystics.</p>
+              <p>For individuals, my coaching invites you to pay attention to your own non-linear, non-rational experiences as sources of insight, inspiration, and connection to the wider living world.</p>
+              <p>For groups and organizations, I help facilitate shared meaning-making practices, collective rituals, and imaginative approaches that deepen cohesion, cultural grounding, and a sense of purpose beyond the everyday.</p>
+            </div>
           </div>
 
-          <div class="media">
-            <figure class="media__frame">
-              <div class="media__placeholder" aria-hidden="true"></div>
-              <figcaption class="media__caption">
-                Practice that’s embodied, relational, and strategic.
-              </figcaption>
-            </figure>
+          <div class="media-break">
+            <img src="images/mandala.webp" alt="Four Dimensions mandala illustration" class="approach__image" />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
+    <!-- ABOUT -->
+    <section id="about" class="section">
       <div class="container">
         <header class="section__header">
-          <h2>About Roberto</h2>
+          <h2>The Call to Adulthood and Eldering</h2>
+          <p class="section__subhead">Why I'm Here</p>
         </header>
 
         <div class="story-with-image">
-          <div class="prose">
-            <p>
-              I’m a coach, facilitator, and consultant working at the intersection of relationships and systems.
-              I support people working toward justice, collective liberation, and relational skill.
-            </p>
-            <p>
-              My work is informed by somatic practice, community accountability, movement learning, and deep respect
-              for what people are carrying.
-            </p>
+          <div class="story">
+            <p>We live in a time that asks much of us—a time when tending to relationships, healing from harm, and cultivating collective care are essential acts of leadership and aliveness.</p>
+            
+            <p>This call has shaped the path I walk.</p>
+            
+            <p>I grew up amidst physical violence, systemic injustice, and familial disruption. I was a witness to harm, a recipient of it—and, at times, a participant in survival-based patterns I've been actively unlearning, slowly and steadily, ever since. These early experiences taught me about power, resilience, and the deep cost of disconnection.</p>
+            
+            <p>And over time, I encountered other ways of living.<br>
+            Mentors, movements, and lineages showed me what repair could look like. I was invited into community, into ritual, into embodied practice. I learned to listen more deeply—to the land, to conflict, to the wisdom carried in our bodies and stories.</p>
+            
+            <p><strong>This is the ground my work stands on.</strong></p>
+            
+            <p>I support people navigating the complexities of human relationship—internally, interpersonally, and within the systems we live inside. I believe that reaching true adulthood means taking responsibility for the ways we show up in the world: how we wield power, how we relate to one another, how we contribute to collective thriving.</p>
+            
+            <p>My commitment is to support the pursuit of <strong>Relational Wholeness</strong>:<br>
+            To foster awareness, health, and repair through meaningful engagement and service—<br>
+            with each other, and with the more-than-human world that holds us.</p>
+            
+            <p>I bring tools, frameworks, skills, and wisdom passed down by my teachers, my ancestors, and my lived experience.<br>
+            And I hold a deep belief:<br>
+            Each of us carries a vital contribution—something essential to the well-being of the interconnected systems we belong to, that nourish us, and that we in turn nourish.</p>
+            
+            <p><strong>My role is to help clarify, support, and strengthen your individual and collective efforts to express that contribution—<br>
+            so that together, we can grow something liberatory, alive, and lasting.</strong></p>
           </div>
 
-          <div class="media">
-            <figure class="media__frame">
-              <div class="media__placeholder" aria-hidden="true"></div>
-              <figcaption class="media__caption">
-                (Add photo here if desired.)
-              </figcaption>
-            </figure>
+          <div class="media-break">
+            <img src="images/relational-wholeness.webp" alt="Relational wholeness and connection illustration" class="about__image" />
+          </div>
+        </div>
+
+        <div class="what-i-bring">
+          <h3>What I Bring to our coaching and consulting sessions</h3>
+          <ul class="styled-list">
+            <li>Deep curiosity, compassionate listening, playful irreverence, and guidance from ancestral traditions</li>
+            <li>Regenerative maps and concepts to navigate complexity and change</li>
+            <li>Collaborative social structures that foster trust, belonging, and shared leadership</li>
+            <li>Effective tools for inner work, relationship dynamics, and systemic transformation</li>
+            <li>Nervous system regulation practices to support resilience and capacity</li>
+            <li>A toolbox of rest, ritual, and regenerative practices that nourish individuals and groups</li>
+            <li>Structure and accountability for sustainable, rhythmic practice and growth</li>
+          </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3 class="experience-title">Relevant Life Experience</h3>
+        
+        <div class="experience-grid">
+          <div class="experience">
+            <h4>Processwork Student-Practitioner</h4>
+            <p>I'm actively training in Process-oriented Psychology (Processwork), a depth approach that integrates somatic, transpersonal, and systemic perspectives. Processwork extends dream analysis to body experiences and applies psychology to world issues including diversity, social conflict, and leadership.</p>
+            <p class="small muted"><em>(For more on Processwork, check out the full <a href="https://en.wikipedia.org/wiki/Process-oriented_psychology" target="_blank" class="text-link">wiki article here</a>.)</em></p>
+          </div>
+
+          <div class="experience">
+            <h4>Educator</h4>
+            <p>My passion for teaching began at 16 as a martial arts instructor. Since then, I've taught English, Spanish, martial arts, and dance to students of all ages, in the U.S. and internationally. Today, learning and teaching remain central to my life and work.</p>
+          </div>
+
+          <div class="experience">
+            <h4>Facilitator</h4>
+            <p>By my late 20s, I focused on interpersonal communication, group facilitation, and conflict mediation. Encouraged by mentors and communities, I've spent years honing these skills and now offer facilitation and mediation to diverse groups.</p>
+          </div>
+
+          <div class="experience">
+            <h4>Embodiment Coach</h4>
+            <p>Decades of martial arts, dance, Tai Chi, and Qi Gong inform my approach. I integrate these practices with Processwork's Dreambody work to support clients' embodied awareness and development.</p>
+          </div>
+
+          <div class="experience">
+            <h4>Bridge-builder and Liberation Agent</h4>
+            <p>Raised in a working-class Latino family in NYC, I learned early to navigate cultural, racial, and class divides. This experience informs my commitment to helping communities build bridges across differences. I'm a founding team member of The Affinity-Belonging Initiative, a nonprofit dedicated to social integration and liberation, and I lead workshops on conflict transformation and community-building.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="events">
+    <!-- EVENTS -->
+    <section id="events" class="section">
       <div class="container">
         <header class="section__header">
           <h2>Upcoming Events</h2>
-          <p class="muted">Workshops, retreats, and gatherings.</p>
+          <p class="section__subhead">Public events, retreats, and trainings</p>
         </header>
+
+        <div class="events-hero">
+          <img src="images/community-gathering.webp" alt="Community gathering around fire" class="events-hero__image" />
+        </div>
 
         <div class="events">
           <article class="event event--featured">
             <div class="event__meta">
-              <span class="event__date">June 29th – July 2nd</span>
-              <span class="event__place">Oregon Coast</span>
+              <p class="event__date">June 29th – July 2nd</p>
+              <p class="event__place">Oregon Coast</p>
             </div>
-            <h3 class="event__title">Relational Wholeness Retreat</h3>
             <div class="event__body">
-              <p>Four days of practice, community, and integration.</p>
+              <h3>Liberation Lab: for Change-Agents, Kinship Tenders, and Visionaries</h3>
+              
+              <div class="event__details">
+                <p><strong>Imagine a gathering led mostly by People of the Global Majority (PGM/BIPOC) and Trans/Gender non-conforming humans, practicing:</strong></p>
+                <ul>
+                  <li>Community somatic self-care</li>
+                  <li>Singing together</li>
+                  <li>Resource-sharing</li>
+                  <li>Life-affirming paradigms and ceremonies</li>
+                  <li>Conflict transformation</li>
+                  <li>Tools for building the world in which we want to live</li>
+                </ul>
+                
+                <p>We will work at many levels—personal, interpersonal, systemic, and ancestral—acknowledging the deep occupation of modernity in our lives.</p>
+                
+                <p>If you feel called to be part of a collective, multi-generational, love crew with a liberatory quest for a better world for all, join us.</p>
+                
+                <p><strong>Times:</strong><br>
+                Sunday, June 29th, 4pm – Wednesday, July 2nd, 7pm<br>
+                (All meals provided, including celebratory dinner on last day.)</p>
+              </div>
+              
+              <a class="btn btn--primary" href="https://www.networkfornewculture.org/liberation-lab" target="_blank">Learn More / Apply →</a>
             </div>
-            <a class="btn btn--small" href="#contact">Inquire</a>
           </article>
 
           <article class="event">
             <div class="event__meta">
-              <span class="event__date">TBD</span>
-              <span class="event__place">Online / In-person</span>
+              <p class="event__date">February 19th, 2025</p>
+              <p class="event__place">10am–12noon PST<br>Online via Stellar Village</p>
             </div>
-            <h3 class="event__title">Workshops & Trainings</h3>
             <div class="event__body">
-              <p>More offerings coming soon.</p>
+              <h3>NestQuest: Building Community from Scratch</h3>
+              
+              <div class="event__details">
+                <p>An interactive workshop guiding you through the first steps of forming your own "POD"—a close-knit group built on shared values, trust, and mutual growth.</p>
+                
+                <p><strong>What We'll Cover:</strong></p>
+                <ul>
+                  <li>✅ Clarifying Your Vision: What is a POD?</li>
+                  <li>✅ Identifying Your Core Group</li>
+                  <li>✅ Understanding Group Chemistry & Alignment</li>
+                  <li>✅ Defining Purpose & Values</li>
+                  <li>✅ Early Communication & Meeting Norms</li>
+                </ul>
+                
+                <p>You'll leave with a starter plan for assembling your POD and a roadmap for next steps.</p>
+              </div>
+              
+              <a class="btn btn--primary" href="https://www.stellarvillage.com/courses/nest?ref=466be6" target="_blank">Register / Learn More →</a>
+            </div>
+          </article>
+
+          <article class="event">
+            <div class="event__meta">
+              <p class="event__date">February 26th, 2025</p>
+              <p class="event__place">10am–12noon PST<br>Online via Stellar Village</p>
+            </div>
+            <div class="event__body">
+              <h3>Facilitating Conflict Transformation and Building Group Resilience</h3>
+              
+              <div class="event__details">
+                <p>Conflict is inevitable—and can be transformative when met skillfully.</p>
+                
+                <p><strong>In This Workshop:</strong></p>
+                <ul>
+                  <li>✅ Identify areas where your conflict work can grow</li>
+                  <li>✅ Explore layers of conflict (personal, interpersonal, systemic)</li>
+                  <li>✅ Recognize and shift power dynamics, roles, biases</li>
+                  <li>✅ Learn key facilitator skills and meta-skills</li>
+                  <li>✅ Build group resilience and awareness</li>
+                </ul>
+                
+                <p>For facilitators, community leaders, and anyone seeking practical, embodied tools for navigating conflict in personal or professional contexts.</p>
+              </div>
+              
+              <a class="btn btn--primary" href="https://www.stellarvillage.com/courses/group-resilience?ref=466be6" target="_blank">Register / Learn More →</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <!-- CONTACT -->
+    <section id="contact" class="section">
       <div class="container">
         <header class="section__header">
-          <h2>Let’s Connect</h2>
-          <p class="muted">Tell me what you’re navigating and what kind of support you’re looking for.</p>
+          <h2>Let's Connect</h2>
+          <p class="section__subhead">
+            I'd love to hear from you. Use the form to ask questions, share what's on your mind, or start a conversation about working together.
+          </p>
         </header>
 
-        <div class="contact-grid">
-          <div class="prose">
-            <p>
-              The simplest way to start is a discovery call. If you prefer email, share a brief description of your context
-              and what you’re hoping for, and I’ll reply with next steps.
-            </p>
-            <p class="muted">
-              Note: This site is a static GitHub Pages site; the form below is a placeholder unless you connect a form provider.
-            </p>
-          </div>
-
+        <div class="contact">
           <form class="form" action="#" method="post">
-            <label class="field">
-              <span>Name</span>
-              <input type="text" name="name" autocomplete="name" required>
-            </label>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+            </div>
 
-            <label class="field">
-              <span>Email</span>
-              <input type="email" name="email" autocomplete="email" required>
-            </label>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
 
-            <label class="field">
-              <span>Message</span>
-              <textarea name="message" rows="6" required></textarea>
-            </label>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="What are you looking for? What's happening in your context?" required></textarea>
+            </div>
 
-            <button class="btn" type="submit">Send</button>
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="small muted">Replace this form action with your email/form provider (Buttondown, Formspree, etc.).</p>
           </form>
+
+          <aside class="contact__aside">
+            <div class="card">
+              <h3>Quick links</h3>
+              <ul class="list">
+                <li><a class="text-link" href="#services">Services</a></li>
+                <li><a class="text-link" href="#approach">Approach</a></li>
+                <li><a class="text-link" href="#events">Events</a></li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Inquiry notes</h3>
+              <p class="small">
+                If you're reaching out for team or organizational work, include your timeline, group size, and the
+                core challenge you're facing. If you're not sure yet, that's okay—start where you are.
+              </p>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- PORTRAIT SECTION -->
+  <section class="portrait-section">
+    <div class="container">
+      <div class="portrait-grid">
+        <div class="portrait__image-wrap">
+          <img src="images/hero.webp" alt="Roberto Rodriguez portrait illustration" class="portrait__image" />
+          <p class="portrait__caption">A grounded presence. A gentle invitation.</p>
+        </div>
+        <div class="portrait__text">
+          <blockquote class="quote quote--large">
+            <p>"Go toward the trouble. Be with the trouble."</p>
+            <footer>— Ancestors</footer>
+          </blockquote>
+          <div class="portrait__cta">
+            <p><strong>Every offering is a collaboration.<br>Every session is an intentional space for learning and change.</strong></p>
+            <a class="btn btn--primary" href="#contact">Let's Begin the Conversation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
-      <p class="muted">© <span id="year"></span> Roberto Rodriguez</p>
-      <a class="muted" href="#top">Back to top ↑</a>
+      <div class="footer__brand">
+        <p class="footer__title">All About Relationship</p>
+        <p class="footer__url">www.robertorodriguez.live</p>
+      </div>
+      <div class="footer__copy">
+        <p class="small">© <span id="year"></span> Roberto Rodriguez</p>
+        <p class="small muted">Thank you for visiting! Looking forward to more generative engagements!</p>
+      </div>
     </div>
   </footer>
 
   <script>
-    // Year
+    // Mobile nav toggle
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector("#site-nav");
+    toggle?.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      nav.classList.toggle("nav--open");
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav
-    const toggle = document.querySelector(".nav__toggle");
-    const menu = document.getElementById("navMenu");
-    if (toggle && menu) {
-      toggle.addEventListener("click", () => {
-        const expanded = toggle.getAttribute("aria-expanded") === "true";
-        toggle.setAttribute("aria-expanded", String(!expanded));
-        menu.classList.toggle("is-open");
+    // Staggered fade-in animations on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
       });
-    }
+    }, observerOptions);
+
+    document.querySelectorAll('.outcome, .dimension, .experience, .event').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
   </script>
 </body>
 </html>
