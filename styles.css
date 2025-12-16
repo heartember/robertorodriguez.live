@@ -998,6 +998,7 @@ input::placeholder, textarea::placeholder{
 
 body{
   text-rendering: optimizeLegibility;
+  font-size: 18px;
 }
 
 .hero{
@@ -1062,13 +1063,7 @@ body{
 .figure--bleed{
   margin: 18px 0 10px;
 }
-@media (min-width: 980px){
-  .figure--bleed{
-    width: calc(100% + 120px);
-    margin-left: -60px;
-    margin-right: -60px;
-  }
-}
+
 
 /* Softer quote treatment */
 .quote{
@@ -1146,7 +1141,7 @@ body{
 .figure--hero .figure__img{
   height: 100%;
   object-fit: cover;
-  min-height: 430px;
+  min-height: 380px;
 }
 
 @media (max-width: 920px){
@@ -1155,6 +1150,94 @@ body{
   }
 }
 
+
+
+
+/* -----------------------------
+  Readability boost
+------------------------------ */
+
+.hero__title{
+  letter-spacing: -0.025em;
+}
+
+.hero__lede{
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+.section__header h2{
+  font-size: clamp(30px, 3.4vw, 42px);
+}
+
+.section__subhead{
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.card, .service, .mini, details, .form, .event{
+  font-size: 17px;
+}
+
+.small{
+  font-size: 15px;
+}
+
+/* Make links and buttons feel easier to hit/read */
+.nav{
+  font-size: 15px;
+}
+.btn{
+  font-size: 15px;
+}
+
+
+
+/* -----------------------------
+  Images integrated with text
+------------------------------ */
+
+.figure--inline{
+  max-width: 520px;
+  margin: 14px 0;
+}
+
+.figure--inline .figure__img{
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(0,0,0,.35);
+}
+
+/* Float on larger screens so images feel embedded in the reading flow */
+@media (min-width: 980px){
+  .figure--float{
+    float: right;
+    margin: 2px 0 12px 18px;
+    max-width: 460px;
+  }
+}
+
+/* Clear floats inside cards/sections */
+.card::after, .container::after{
+  content:"";
+  display:block;
+  clear: both;
+}
+
+/* On mobile, keep figures centered and not too tall */
+@media (max-width: 920px){
+  .figure--inline{
+    max-width: 100%;
+  }
+  .figure--float{
+    float: none;
+    margin: 14px 0;
+    max-width: 100%;
+  }
+  .figure--inline .figure__img{
+    max-height: 360px;
+    object-fit: cover;
+  }
+}
 
 
 /* -----------------------------
