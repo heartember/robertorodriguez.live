@@ -1279,40 +1279,30 @@ input::placeholder, textarea::placeholder{
     transform: none !important;
   }
 
-  /* ======================================
-   HARD RESET: NO BACKGROUND BANDING
-   ====================================== */
+/* ===============================
+   FINAL: Remove background banding
+   =============================== */
 
-section,
-.section,
-.section > .container,
-main,
-body {
-  background: transparent !important;
-}
-
-/* Kill any pseudo-element bands */
-section::before,
-section::after,
-.section::before,
-.section::after,
-.container::before,
-.container::after {
+/* Kill the full-bleed "band" overlays */
+.section--alt > .container::before,
+.portrait-section > .container::before{
   content: none !important;
-  background: none !important;
+  display: none !important;
 }
 
-/* Keep cards, but prevent full-width band feel */
-.outcomes,
-.cta-bar,
-.portrait-section .container {
-  background: rgba(255,255,255,.04);
+/* Undo the padding/margin hack that supported those bands */
+.section--alt > .container,
+.portrait-section > .container{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-/* Reduce stripe illusion by spacing, not color */
-.section {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-
+/* Ensure those sections are just normal transparent sections */
+.section--alt,
+.portrait-section{
+  background: transparent !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
 }
