@@ -417,36 +417,12 @@ p:last-child { margin-bottom: 0; }
   Sections
 ------------------------------ */
 
-/* KEY FIX: Stable section boundaries + no margin-collapse drift */
 .section{ 
   padding: 80px 0;
   position: relative;
-  display: flow-root; /* prevents margin-collapsing & contains internal layout */
-  overflow: hidden;   /* contain decorative layers */
 }
 
-/* KEY FIX: Apply alternating full-bleed background to SECTION itself */
-.section--alt::before{
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  bottom: 0;
-  width: 100vw;
-  background: rgba(255,255,255,.03);
-  border-top: 1px solid rgba(255,255,255,.08);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  z-index: -1;
-}
-
-/* Clear floats defensively (though floats are removed) */
-.section::after,
-.container::after {
-  content: '';
-  display: table;
-  clear: both;
-}
+/* Remove all alternating backgrounds */
 
 .section__header{
   margin-bottom: 32px;
@@ -553,7 +529,6 @@ p:last-child { margin-bottom: 0; }
 .dimensions-title {
   margin-top: 48px;
   margin-bottom: 12px;
-  clear: both;
 }
 
 .dimensions-intro {
@@ -561,6 +536,25 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 32px;
   font-style: italic;
   font-size: 18px;
+}
+
+/* Simple image placement after dimensions */
+.dimensions-with-image {
+  margin-bottom: 32px;
+}
+
+.dimensions-with-image .dimensions {
+  margin-bottom: 40px;
+}
+
+.dimensions-with-image .media-break {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.dimensions-with-image .approach__image {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .story {
@@ -612,49 +606,6 @@ p:last-child { margin-bottom: 0; }
 
 .media-break {
   margin: 0;
-}
-
-/* -----------------------------
-  Media Row (NEW): align images with text cleanly
------------------------------- */
-
-.media-row{
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 420px;
-  gap: 48px;
-  align-items: start;
-}
-
-.media-row__text{
-  max-width: none;
-  min-width: 0;
-}
-
-.media-row__media{
-  min-width: 0;
-}
-
-.media-row__media img{
-  width: 100%;
-  margin: 0;
-}
-
-/* If you want "image on the left", add .media-row--reverse */
-.media-row--reverse{
-  grid-template-columns: 420px minmax(0, 1fr);
-}
-.media-row--reverse .media-row__media{ order: 0; }
-.media-row--reverse .media-row__text{ order: 1; }
-
-@media (max-width: 919px){
-  .media-row,
-  .media-row--reverse{
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .media-row__media{
-    order: -1; /* image above text on mobile */
-  }
 }
 
 /* -----------------------------
@@ -1087,27 +1038,9 @@ input::placeholder, textarea::placeholder{
   Portrait Section (near footer)
 ------------------------------ */
 
-/* keep portrait section aligned with the new alt-band approach */
 .portrait-section {
   padding: 80px 0;
   position: relative;
-  display: flow-root;
-  overflow: hidden;
-}
-
-/* Give portrait section the alt band styling */
-.portrait-section::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  bottom: 0;
-  width: 100vw;
-  background: rgba(255,255,255,.03);
-  border-top: 1px solid rgba(255,255,255,.08);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  z-index: -1;
 }
 
 .portrait-grid {
