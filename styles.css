@@ -407,6 +407,15 @@ p:last-child { margin-bottom: 0; }
 .small{ font-size: 18px; line-height: 1.65; }
 .muted{ color: var(--muted); }
 
+/* Keep form/UI text consistently sans-serif */
+label,
+input,
+textarea,
+select {
+  font-family: 'Darker Grotesque', system-ui, -apple-system, sans-serif;
+}
+
+
 /* -----------------------------
   Sections
 ------------------------------ */
