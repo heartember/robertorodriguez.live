@@ -1306,3 +1306,21 @@ input::placeholder, textarea::placeholder{
   border-top: 0 !important;
   border-bottom: 0 !important;
 }
+
+
+/* ===============================
+   FINAL FIX: remove body banding
+   =============================== */
+
+body{
+  /* Solid base color */
+  background-color: var(--bg) !important;
+
+  /* Keep the nice corner glows, but remove the vertical gradient */
+  background-image:
+    radial-gradient(1200px 700px at 10% 10%, rgba(183,243,209,.11), transparent 60%),
+    radial-gradient(900px 600px at 90% 20%, rgba(240,213,166,.10), transparent 55%) !important;
+
+  /* Optional but helps: prevents “moving gradient” feel while scrolling */
+  background-attachment: fixed, fixed !important;
+}
