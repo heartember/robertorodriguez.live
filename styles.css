@@ -411,11 +411,22 @@ p:last-child { margin-bottom: 0; }
   Sections
 ------------------------------ */
 
-.section{ padding: 80px 0; }
+.section{ 
+  padding: 80px 0;
+  position: relative;
+}
+
 .section--alt{
+  background: transparent;
+  border-top: none;
+  border-bottom: none;
+}
+
+.section--alt .container {
   background: rgba(255,255,255,.025);
-  border-top: 1px solid rgba(255,255,255,.08);
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 24px;
+  padding: 64px 48px;
 }
 
 .section__header{
@@ -999,9 +1010,16 @@ input::placeholder, textarea::placeholder{
 
 .portrait-section {
   padding: 80px 0;
-  background: rgba(255,255,255,.02);
-  border-top: 1px solid rgba(255,255,255,.08);
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  background: transparent;
+  border-top: none;
+  border-bottom: none;
+}
+
+.portrait-section .container {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 24px;
+  padding: 64px 48px;
 }
 
 .portrait-grid {
@@ -1158,6 +1176,11 @@ input::placeholder, textarea::placeholder{
   
   .section { padding: 56px 0; }
   
+  .section--alt .container {
+    padding: 48px 28px;
+    border-radius: 20px;
+  }
+  
   .hero { padding: 56px 0 36px; }
   
   .hero--landscape {
@@ -1210,6 +1233,11 @@ input::placeholder, textarea::placeholder{
   
   .portrait-section {
     padding: 60px 0;
+  }
+  
+  .portrait-section .container {
+    padding: 48px 28px;
+    border-radius: 20px;
   }
 }
 
