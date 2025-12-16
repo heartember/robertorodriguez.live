@@ -422,11 +422,27 @@ p:last-child { margin-bottom: 0; }
   border-bottom: none;
 }
 
-.section--alt .container {
-  background: rgba(255,255,255,.025);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 24px;
-  padding: 64px 48px;
+/* Apply background to container instead for better alignment */
+.section--alt > .container {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: -80px;
+  margin-bottom: -80px;
+}
+
+.section--alt > .container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  background: rgba(255,255,255,.03);
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  z-index: -1;
 }
 
 .section__header{
@@ -1013,13 +1029,29 @@ input::placeholder, textarea::placeholder{
   background: transparent;
   border-top: none;
   border-bottom: none;
+  margin: 0;
 }
 
-.portrait-section .container {
-  background: rgba(255,255,255,.025);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 24px;
-  padding: 64px 48px;
+.portrait-section > .container {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: -80px;
+  margin-bottom: -80px;
+}
+
+.portrait-section > .container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  background: rgba(255,255,255,.03);
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  z-index: -1;
 }
 
 .portrait-grid {
@@ -1176,9 +1208,11 @@ input::placeholder, textarea::placeholder{
   
   .section { padding: 56px 0; }
   
-  .section--alt .container {
-    padding: 48px 28px;
-    border-radius: 20px;
+  .section--alt > .container {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    margin-top: -56px;
+    margin-bottom: -56px;
   }
   
   .hero { padding: 56px 0 36px; }
@@ -1235,9 +1269,11 @@ input::placeholder, textarea::placeholder{
     padding: 60px 0;
   }
   
-  .portrait-section .container {
-    padding: 48px 28px;
-    border-radius: 20px;
+  .portrait-section > .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: -60px;
+    margin-bottom: -60px;
   }
 }
 
