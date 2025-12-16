@@ -1278,4 +1278,41 @@ input::placeholder, textarea::placeholder{
     opacity: 1 !important;
     transform: none !important;
   }
+
+  /* ======================================
+   HARD RESET: NO BACKGROUND BANDING
+   ====================================== */
+
+section,
+.section,
+.section > .container,
+main,
+body {
+  background: transparent !important;
+}
+
+/* Kill any pseudo-element bands */
+section::before,
+section::after,
+.section::before,
+.section::after,
+.container::before,
+.container::after {
+  content: none !important;
+  background: none !important;
+}
+
+/* Keep cards, but prevent full-width band feel */
+.outcomes,
+.cta-bar,
+.portrait-section .container {
+  background: rgba(255,255,255,.04);
+}
+
+/* Reduce stripe illusion by spacing, not color */
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
 }
