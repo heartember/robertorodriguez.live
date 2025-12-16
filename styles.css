@@ -1030,11 +1030,7 @@ input::placeholder, textarea::placeholder{
   Portrait Section (near footer)
 ------------------------------ */
 
-.portrait-section {
-  padding: 80px 0;
-  position: relative;
-  background: transparent;
-}
+
 
 .portrait-grid {
   display: grid;
@@ -1239,10 +1235,6 @@ input::placeholder, textarea::placeholder{
   .footer__copy {
     text-align: left;
   }
-  
-  .portrait-section {
-    padding: 60px 0;
-  }
 }
 
 @media (max-width: 860px){
@@ -1278,34 +1270,7 @@ input::placeholder, textarea::placeholder{
     opacity: 1 !important;
     transform: none !important;
   }
-
-/* ===============================
-   FINAL: Remove background banding
-   =============================== */
-
-/* Kill the full-bleed "band" overlays */
-.section--alt > .container::before,
-.portrait-section > .container::before{
-  content: none !important;
-  display: none !important;
-}
-
-/* Undo the padding/margin hack that supported those bands */
-.section--alt > .container,
-.portrait-section > .container{
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-/* Ensure those sections are just normal transparent sections */
-.section--alt,
-.portrait-section{
-  background: transparent !important;
-  border-top: 0 !important;
-  border-bottom: 0 !important;
-}
+)
 
 
 /* ===============================
