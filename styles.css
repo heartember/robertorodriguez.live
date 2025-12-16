@@ -333,7 +333,28 @@ a:hover { opacity: .85; }
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(255,255,255,.12);
   display: block;
-  margin: 0 auto;
+}
+
+/* Float images on larger screens for better text flow */
+@media (min-width: 920px) {
+  .approach__image {
+    float: right;
+    margin: 0 0 32px 48px;
+    max-width: 420px;
+  }
+  
+  .about__image {
+    float: right;
+    margin: 0 0 32px 48px;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 919px) {
+  .approach__image,
+  .about__image {
+    margin: 0 auto 32px;
+  }
 }
 
 /* Legacy placeholder styles - keeping for any remaining placeholders */
@@ -414,6 +435,15 @@ p:last-child { margin-bottom: 0; }
 .section{ 
   padding: 80px 0;
   position: relative;
+  overflow: hidden; /* Contain floats */
+}
+
+/* Clear floats in sections */
+.section::after,
+.container::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .section--alt{
@@ -547,9 +577,17 @@ p:last-child { margin-bottom: 0; }
   line-height: 1.75;
 }
 
+/* On larger screens with floated images, text should flow naturally */
+@media (min-width: 920px) {
+  .approach-overview {
+    max-width: none; /* Allow text to flow around floated image */
+  }
+}
+
 .dimensions-title {
   margin-top: 48px;
   margin-bottom: 12px;
+  clear: both; /* Clear any floats from above */
 }
 
 .dimensions-intro {
@@ -565,6 +603,13 @@ p:last-child { margin-bottom: 0; }
   font-size: 22px;
   line-height: 1.8;
   margin-bottom: 48px;
+}
+
+/* On larger screens, allow story to flow around floated image */
+@media (min-width: 920px) {
+  .story {
+    max-width: none;
+  }
 }
 
 .story p {
@@ -588,10 +633,26 @@ p:last-child { margin-bottom: 0; }
 .experience-title {
   margin-top: 48px;
   margin-bottom: 28px;
+  clear: both; /* Clear any floats from above */
 }
 
 .media-break {
-  margin: 48px 0;
+  margin: 32px 0;
+  overflow: visible;
+}
+
+/* Clear floats after media breaks */
+.media-break::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* On larger screens, reduce top margin since text will flow around */
+@media (min-width: 920px) {
+  .media-break {
+    margin: 0 0 48px 0;
+  }
 }
 
 /* -----------------------------
