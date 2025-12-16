@@ -45,7 +45,6 @@ body{
   font-weight: 400;
 }
 
-/* Image baseline: block removes inline gap issues */
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; transition: all .2s ease; }
 a:hover { opacity: .85; }
@@ -334,11 +333,14 @@ a:hover { opacity: .85; }
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(255,255,255,.12);
   display: block;
-  margin: 0; /* ALIGN: don’t auto-center by default */
 }
 
-/* IMPORTANT: Removed float-based layout.
-   Use .media-row layout instead (see below). */
+@media (max-width: 919px) {
+  .approach__image,
+  .about__image {
+    margin: 0 auto 32px;
+  }
+}
 
 /* Legacy placeholder styles - keeping for any remaining placeholders */
 .media-placeholder{
@@ -415,35 +417,15 @@ p:last-child { margin-bottom: 0; }
   Sections
 ------------------------------ */
 
-/* KEY FIX: Stable section boundaries + no margin-collapse drift */
 .section{ 
   padding: 80px 0;
   position: relative;
-  display: flow-root; /* prevents margin-collapsing & contains internal layout */
-  overflow: hidden;   /* contain decorative layers */
 }
 
-/* KEY FIX: Apply alternating full-bleed background to SECTION itself */
-.section--alt::before{
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  bottom: 0;
-  width: 100vw;
+.section--alt{
   background: rgba(255,255,255,.03);
   border-top: 1px solid rgba(255,255,255,.08);
   border-bottom: 1px solid rgba(255,255,255,.08);
-  z-index: -1;
-}
-
-/* Clear floats defensively (though floats are removed) */
-.section::after,
-.container::after {
-  content: '';
-  display: table;
-  clear: both;
 }
 
 .section__header{
@@ -521,49 +503,6 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* -----------------------------
-  Media Row (NEW): align images with text cleanly
------------------------------- */
-
-.media-row{
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 420px;
-  gap: 48px;
-  align-items: start;
-}
-
-.media-row__text{
-  max-width: none;
-  min-width: 0;
-}
-
-.media-row__media{
-  min-width: 0;
-}
-
-.media-row__media img{
-  width: 100%;
-  margin: 0;
-}
-
-/* If you want “image on the left”, add .media-row--reverse */
-.media-row--reverse{
-  grid-template-columns: 420px minmax(0, 1fr);
-}
-.media-row--reverse .media-row__media{ order: 0; }
-.media-row--reverse .media-row__text{ order: 1; }
-
-@media (max-width: 919px){
-  .media-row,
-  .media-row--reverse{
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .media-row__media{
-    order: -1; /* image above text on mobile */
-  }
-}
-
-/* -----------------------------
   Content Blocks
 ------------------------------ */
 
@@ -591,24 +530,34 @@ p:last-child { margin-bottom: 0; }
   line-height: 1.75;
 }
 
-/* With media-row, you generally don't need special max-width logic */
-@media (min-width: 920px) {
-  .approach-overview {
-    max-width: none;
-  }
-}
-
 .dimensions-title {
   margin-top: 48px;
   margin-bottom: 12px;
-  clear: both;
 }
 
 .dimensions-intro {
   color: var(--muted);
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   font-style: italic;
   font-size: 18px;
+}
+
+.dimensions-with-image {
+  /* Simple container - no complex grid */
+  margin-bottom: 32px;
+}
+
+.dimensions-with-image .dimensions {
+  margin-bottom: 40px;
+}
+
+.dimensions-with-image .media-break {
+  text-align: center;
+}
+
+.dimensions-with-image .approach__image {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .story {
@@ -616,13 +565,22 @@ p:last-child { margin-bottom: 0; }
   font-family: 'Crimson Pro', serif;
   font-size: 22px;
   line-height: 1.8;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
-@media (min-width: 920px) {
-  .story {
-    max-width: none;
-  }
+.story-with-image {
+  /* Simple container - no complex grid */
+  margin-bottom: 32px;
+}
+
+.story-with-image .media-break {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.story-with-image .about__image {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .story p {
@@ -646,24 +604,11 @@ p:last-child { margin-bottom: 0; }
 .experience-title {
   margin-top: 48px;
   margin-bottom: 28px;
-  clear: both;
+  clear: both; /* Clear any floats from above */
 }
 
 .media-break {
-  margin: 32px 0;
-  overflow: visible;
-}
-
-.media-break::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@media (min-width: 920px) {
-  .media-break {
-    margin: 0 0 48px 0;
-  }
+  margin: 0;
 }
 
 /* -----------------------------
@@ -1096,16 +1041,12 @@ input::placeholder, textarea::placeholder{
   Portrait Section (near footer)
 ------------------------------ */
 
-/* keep portrait section aligned with the new alt-band approach */
 .portrait-section {
   padding: 80px 0;
-  position: relative;
-  display: flow-root;
-  overflow: hidden;
+  background: rgba(255,255,255,.03);
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
-
-/* If you want portrait section to look like an alt band, give it section--alt in HTML.
-   Otherwise leave it transparent. */
 
 .portrait-grid {
   display: grid;
