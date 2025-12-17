@@ -617,6 +617,52 @@ select {
   margin-top: 48px;
 }
 
+/* What I Bring — portrait on the right */
+
+.what-i-bring__layout{
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 32px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+.what-i-bring__portrait{
+  margin: 0;
+  position: sticky;
+  top: 96px;
+  text-align: center;
+}
+
+.portrait__image--small{
+  width: 100%;
+  max-width: 260px;
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.what-i-bring__list{
+  margin: 0;
+}
+
+/* Mobile: stack naturally */
+@media (max-width: 900px){
+  .what-i-bring__layout{
+    grid-template-columns: 1fr;
+  }
+
+  .what-i-bring__portrait{
+    position: static;
+    justify-self: center;
+    margin-top: 12px;
+  }
+
+  .portrait__image--small{
+    max-width: 300px;
+  }
+}
+
+
 .experience-title {
   margin-top: 48px;
   margin-bottom: 28px;
