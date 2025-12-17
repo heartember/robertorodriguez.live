@@ -13,9 +13,9 @@
   --faint: rgba(255,255,255,.65);
   --border: rgba(255,255,255,.12);
 
-  --accent: #d9a24a;
-  --accent-2: #e6cfa6;
-  --accent-warm: #b97a27;
+  --accent: #d9a24a;        /* primary ember accent */
+  --accent-warm: #b97a27;   /* deeper ember */
+  --accent-2: #e6cfa6;      /* soft parchment / secondary warmth */
   --ring: rgba(217,162,74,.35);
 
   --radius: 18px;
@@ -485,21 +485,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero-only: subtle ember gradient emphasis */
 /* Ember gradient text (same technique as the old aqua .accent) */
-.ember-gradient{
-  background: linear-gradient(
-    140deg,
-    #e2b66a,   /* lighter ember */
-    #c9933a,
-    #9f6a1f    /* deeper earthy ember */
-  );
-
+.accent{
+   background: linear-gradient(140deg, var(--accent), var(--accent-warm));
   -webkit-background-clip: text;
   background-clip: text;
 
   -webkit-text-fill-color: transparent; /* key for Safari/Chrome */
   color: transparent;
 
-  display: inline-block; /* avoids occasional clipping weirdness */
+  /* optional, subtle */
+  filter: drop-shadow(0 2px 8px rgba(217,162,74,.22));
 }
 
 
