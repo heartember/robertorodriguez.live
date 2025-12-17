@@ -501,6 +501,23 @@ select {
   align-items: start;
 }
 
+/* Approach: make the mandala feel anchored and aligned */
+.dimensions-with-image{
+  align-items: start;
+}
+
+.dimensions-with-image .media-break{
+  justify-content: center;
+  align-items: flex-start;
+  position: sticky;
+  top: 120px; /* clears the sticky topbar */
+}
+
+.dimensions-with-image .approach__image{
+  max-width: 420px;
+}
+
+
 .media-break{
   margin: 0;              /* grid handles spacing */
   display: flex;
