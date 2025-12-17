@@ -1033,21 +1033,24 @@ input::placeholder, textarea::placeholder{
 }
 
 /* -----------------------------
-  Portrait Section (near footer)
+  Portrait (inline, mid-page)
 ------------------------------ */
 
-.portrait-grid {
+.portrait-section{
+  margin: 22px 0 28px;
+}
+
+.portrait-inline{
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 64px;
-  align-items: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 22px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.10);
 }
 
-.portrait__image-wrap {
-  text-align: center;
-}
-
-.portrait__image {
+.portrait__image{
   width: 100%;
   max-width: 450px;
   height: auto;
@@ -1055,10 +1058,10 @@ input::placeholder, textarea::placeholder{
   box-shadow: var(--shadow);
   border: 1px solid rgba(255,255,255,.16);
   display: block;
-  margin: 0 auto 16px;
+  margin: 0;
 }
 
-.portrait__caption {
+.portrait__caption{
   color: var(--faint);
   font-size: 15px;
   letter-spacing: .01em;
@@ -1066,37 +1069,10 @@ input::placeholder, textarea::placeholder{
   margin: 0;
 }
 
-.portrait__text {
-  display: grid;
-  gap: 40px;
+@media (max-width: 920px){
+  .portrait__image{ max-width: 380px; }
 }
 
-.quote--large {
-  margin: 0;
-}
-
-.portrait__cta {
-  padding: 32px;
-  border-radius: var(--radius);
-  background: linear-gradient(140deg, rgba(183,243,209,.12), rgba(255,255,255,.04));
-  border: 1px solid rgba(183,243,209,.25);
-  text-align: center;
-}
-
-.portrait-section {
-  margin-bottom: 64px; /* breathing room before the long story text */
-}
-
-@media (max-width: 920px) {
-  .portrait-grid {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .portrait__image {
-    max-width: 380px;
-  }
-}
 
 /* Footer */
 .footer{
@@ -1284,12 +1260,24 @@ body{
   background-attachment: fixed, fixed !important;
 }
 
-/* Gentle pull-quote emphasis */
-.quote p { 
-  font-size: 1.1em;   /* ~10% larger than body */
+
+/* Gentle pull-quote emphasis (subtle) */
+.quote p{
+  font-size: 1.1em;
   line-height: 1.55;
 }
-.quote--large p {
-  font-size: 2.15em;  /* optional: slightly more, but not 26px */
+.quote--large p{
+  font-size: 1.15em;
+  line-height: 1.55;
 }
+
+.section--closing .quote{
+  margin-top: 0;
+}
+
+.section--closing .cta-bar{
+  margin-top: 24px;
+}
+
+
 
