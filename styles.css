@@ -1286,6 +1286,6 @@ body{
   line-height: 1.55;
 }
 .quote--large p {
-  font-size: 3.15em;  /* optional: slightly more, but not 26px */
+  font-size: 2.15em;  /* optional: slightly more, but not 26px */
 }
 
