@@ -496,14 +496,15 @@ select {
 .dimensions-with-image,
 .story-with-image{
   display: grid;
-  grid-template-columns: 1.35fr .85fr;
-  gap: 56px;
+  grid-template-columns: 1fr;
+  gap: 32px;
   align-items: start;
 }
 
 /* Approach: make the mandala feel anchored and aligned */
 .dimensions-with-image{
   align-items: start;
+  margin-inline: auto;
 }
 
 .dimensions-with-image .media-break{
@@ -514,7 +515,7 @@ select {
 }
 
 .dimensions-with-image .approach__image{
-  max-width: 420px;
+  max-width: 900px;
 }
 
 
