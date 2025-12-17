@@ -483,21 +483,25 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-/* Subtle ember emphasis for key phrase only */
-.ember-gradient{
+/* Hero-only: subtle ember gradient emphasis */
+.hero__title .ember-gradient{
+  display: inline-block;
+
   background: linear-gradient(
     110deg,
-    #e2b66a 0%,   /* lighter ember */
+    #e2b66a 0%,
     #c9933a 45%,
-    #9f6a1f 100%  /* deeper, earthy ember */
+    #9f6a1f 100%
   );
 
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
 
-  /* no glow, no shadow — let texture do the work */
+  /* This is the key piece for Chrome/Safari */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
+
 
 /* Keep navigation and UI elements in sans-serif */
 .nav, .btn, .eyebrow, .brand, .pill {
