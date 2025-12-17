@@ -621,7 +621,7 @@ select {
 
 .what-i-bring__layout{
   display: grid;
-  grid-template-columns: 1fr 260px;
+  grid-template-columns: 1fr 230px;
   gap: 32px;
   align-items: start;
   margin-top: 18px;
@@ -632,11 +632,13 @@ select {
   position: sticky;
   top: 96px;
   text-align: center;
+  align-self: start;
 }
+
 
 .portrait__image--small{
   width: 100%;
-  max-width: 260px;
+  max-width: 230px;
   border-radius: 22px;
   box-shadow: var(--shadow-soft);
 }
