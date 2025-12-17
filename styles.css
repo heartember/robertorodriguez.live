@@ -347,7 +347,7 @@ li { font-size: 1em; line-height: inherit; }
 }
 .quote footer{
   color: var(--faint);
-  font-size: 14px;
+  font-size: 20px;
 }
 
 /* Image placeholders */
