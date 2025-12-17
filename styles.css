@@ -538,11 +538,12 @@ select {
   max-width: 75ch;
 }
 
-/* Working Together illustration */
+/* Working Together illustration (responsive, no-crop, avoids oversized rendering) */
 .work-illustration{
   margin: 28px auto 36px;
-  max-width: 980px;
-  border-radius: 26px;
+  /* Keep it visually “featured” but prevent it from feeling huge on wide desktops */
+  max-width: min(920px, 100%);
+  border-radius: clamp(18px, 2.2vw, 26px);
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.12);
   box-shadow: var(--shadow-soft);
@@ -553,6 +554,12 @@ select {
   width: 100%;
   height: auto;
   display: block;
+
+  /* Ensure no accidental cropping if intrinsic dimensions are odd */
+  object-fit: contain;
+
+  /* Prevent extreme tall rendering on small laptop screens */
+  max-height: min(520px, 65vh);
 }
 
 /* -----------------------------
@@ -603,17 +610,20 @@ select {
   align-items: start;
 }
 
-/* Four Dimensions diagram (inline, like Upcoming Events hero) */
-
-/* Diagram: tight frame (like events hero), no extra panel */
-/* Inline diagram under section heading (match Events hero vibe) */
+/* Four Dimensions diagram (four-dimensions.jpg)
+   Goals:
+   - match the site’s content column
+   - remain crisp on desktop
+   - never crop (contain)
+   - avoid feeling “poster-sized” on big screens
+*/
 .diagram--inline{
   margin: 28px auto 44px;
-  max-width: 980px;
+  max-width: min(980px, 100%);
 }
 
 .diagram-frame{
-  border-radius: 22px;
+  border-radius: clamp(18px, 2vw, 22px);
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.12);
   box-shadow: var(--shadow-soft);
@@ -625,9 +635,15 @@ select {
   height: auto;
   display: block;
   border: 0;
-  border-radius: 0;      /* important: wrapper owns the rounding */
-  box-shadow: none;      /* important */
-  background: transparent; /* important */
+  border-radius: 0;          /* wrapper owns rounding */
+  box-shadow: none;
+  background: transparent;
+
+  /* No crop: preserves full diagram */
+  object-fit: contain;
+
+  /* Keeps it from dominating the viewport on medium screens */
+  max-height: min(640px, 78vh);
 }
 
 .media-break{
@@ -1330,6 +1346,25 @@ input::placeholder, textarea::placeholder{
 .dimension:nth-child(3) { transition-delay: 0.3s; }
 .dimension:nth-child(4) { transition-delay: 0.4s; }
 
+
+
+/* Image sizing refinements */
+@media (max-width: 768px){
+  .work-illustration{
+    margin: 22px auto 28px;
+    max-width: 100%;
+  }
+  .work-illustration__img{
+    max-height: none; /* let it scale naturally on mobile */
+  }
+
+  .diagram--inline{
+    margin: 22px auto 32px;
+  }
+  .diagram__img{
+    max-height: none; /* avoid cramped “letterboxed” look on small screens */
+  }
+}
 /* -----------------------------
   Responsive
 ------------------------------ */
