@@ -508,9 +508,16 @@ select {
   max-height: none;
   object-fit: contain;       /* critical: prevents cropping */
 }
-@media (max-width: 900px){
+@media (max-width: 768px){
+  .relational-wholeness{
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
   .relational-wholeness__img{
-    height: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* contain = no crop */
+    display: block;
   }
 }
 
