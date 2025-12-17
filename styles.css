@@ -531,6 +531,37 @@ select {
   height: auto;
 }
 
+/* Diagrammatic mandala (Approach) */
+.diagram{
+  margin: 0;
+  text-align: center;
+}
+
+.diagram__img{
+  width: 100%;
+  max-width: 420px;      /* adjust 380–460 depending on taste */
+  height: auto;
+}
+
+.diagram__caption{
+  margin-top: 12px;
+  font-size: 15px;
+  color: var(--faint);
+  font-style: italic;
+}
+
+/* Make the diagram feel anchored, not floating */
+.dimensions-with-image{
+  align-items: start;
+}
+
+.dimensions-with-image .diagram{
+  position: sticky;
+  top: 120px;            /* clears your sticky topbar */
+  align-self: start;
+}
+
+
 /* Stack on smaller screens */
 @media (max-width: 1024px){
   .dimensions-with-image,
