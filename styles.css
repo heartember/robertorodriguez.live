@@ -13,10 +13,10 @@
   --faint: rgba(255,255,255,.65);
   --border: rgba(255,255,255,.12);
 
-  --accent: #b7f3d1;
-  --accent-2: #f0d5a6;
-  --accent-warm: #e8c9a0;
-  --ring: rgba(183,243,209,.38);
+  --accent: #f2b24d;
+  --accent-2: #f6cf8f;
+  --accent-warm: #e89a2b;
+  --ring: rgba(242,178,77,.45);
 
   --radius: 18px;
   --radius-lg: 26px;
@@ -159,7 +159,7 @@ main{
   width: 44px; height: 44px;
   border-radius: 14px;
   display: grid; place-items: center;
-  background: linear-gradient(140deg, rgba(183,243,209,.24), rgba(240,213,166,.16));
+  background: linear-gradient(140deg, rgba(242,178,77,.22), rgba(240,213,166,.16));
   border: 1px solid rgba(255,255,255,.16);
   box-shadow: var(--shadow-soft);
   font-weight: 700;
@@ -212,7 +212,7 @@ main{
 }
 
 .nav__cta:hover{
-  background: rgba(183,243,209,.90);
+  background: rgba(242,178,77,.92);
   opacity: 1;
 }
 
@@ -357,7 +357,7 @@ main{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 2px 8px rgba(183, 243, 209, 0.3));
+  filter: drop-shadow(0 2px 8px rgba(242,178,77,0.35));
 }
 
 .hero__lede{
@@ -380,7 +380,7 @@ main{
 
 .hero__note{
   margin-top: 24px;
-  border-left: 2px solid rgba(183,243,209,.5);
+  border-left: 2px solid rgba(242,178,77,.55);
   padding-left: 16px;
 }
 
@@ -451,7 +451,7 @@ main{
   border: 1px solid rgba(255,255,255,.16);
   background:
     linear-gradient(140deg, rgba(255,255,255,.07), rgba(255,255,255,.02)),
-    radial-gradient(700px 420px at 20% 20%, rgba(183,243,209,.16), transparent 60%),
+    radial-gradient(700px 420px at 20% 20%, rgba(242,178,77,.14), transparent 60%),
     radial-gradient(650px 460px at 80% 30%, rgba(240,213,166,.14), transparent 55%);
   box-shadow: var(--shadow);
   min-height: 420px;
@@ -663,8 +663,8 @@ select {
 }
 
 .card--highlight {
-  background: linear-gradient(140deg, rgba(183,243,209,.12), rgba(255,255,255,.04));
-  border-color: rgba(183,243,209,.25);
+  background: linear-gradient(140deg, rgba(242,178,77,.12), rgba(255,255,255,.04));
+  border-color: rgba(242,178,77,.28);
 }
 
 .card--media{ display: grid; gap: 16px; align-content: start; }
@@ -825,7 +825,7 @@ select {
   margin-top: 48px;
   padding: 32px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(140deg, rgba(183,243,209,.08), rgba(240,213,166,.05));
+  background: linear-gradient(140deg, rgba(242,178,77,.08), rgba(246,207,143,.05));
   border: 1px solid rgba(255,255,255,.12);
 }
 
@@ -942,7 +942,7 @@ select {
   content:"";
   position:absolute;
   inset:-1px;
-  background: radial-gradient(600px 260px at 20% 0%, rgba(183,243,209,.12), transparent 60%);
+  background: radial-gradient(600px 260px at 20% 0%, rgba(242,178,77,.12), transparent 60%);
   pointer-events:none;
   opacity: 0;
   transition: opacity .3s ease;
@@ -965,7 +965,7 @@ select {
   border-radius: 999px;
   font-size: 12px;
   color: #07110e;
-  background: rgba(183,243,209,.98);
+  background: rgba(242,178,77,.98);
   border: 1px solid rgba(0,0,0,.12);
   vertical-align: middle;
   font-weight: 600;
@@ -989,8 +989,8 @@ select {
   margin-top: 40px;
   padding: 32px;
   border-radius: var(--radius);
-  background: linear-gradient(140deg, rgba(183,243,209,.12), rgba(255,255,255,.04));
-  border: 1px solid rgba(183,243,209,.25);
+  background: linear-gradient(140deg, rgba(242,178,77,.12), rgba(255,255,255,.04));
+  border: 1px solid rgba(242,178,77,.28);
   text-align: center;
 }
 
@@ -1066,8 +1066,8 @@ select {
 }
 
 .event--featured {
-  background: linear-gradient(140deg, rgba(183,243,209,.10), rgba(255,255,255,.04));
-  border-color: rgba(183,243,209,.25);
+  background: linear-gradient(140deg, rgba(242,178,77,.10), rgba(255,255,255,.04));
+  border-color: rgba(242,178,77,.28);
 }
 
 .event__meta{ 
@@ -1147,7 +1147,7 @@ select {
 }
 
 .btn--primary:hover{ 
-  background: rgba(183,243,209,.92);
+  background: rgba(242,178,77,.92);
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
@@ -1172,7 +1172,7 @@ select {
   color: var(--accent);
   font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: rgba(183,243,209,.4);
+  text-decoration-color: rgba(242,178,77,.45);
   text-underline-offset: 3px;
 }
 
