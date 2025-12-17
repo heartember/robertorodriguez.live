@@ -25,6 +25,10 @@
   --shadow-soft: 0 12px 30px rgba(0,0,0,.25);
 
   --max: 1160px;
+
+  /* Normalize body text site-wide */
+  --body-size: 21px;
+  --body-line: 1.75;
 }
 
 * { box-sizing: border-box; }
@@ -39,8 +43,8 @@ body{
     linear-gradient(180deg, var(--bg), #070a09 55%, #050707);
   color: var(--text);
   font-family: 'Crimson Pro', serif;
-  font-size: 21px;
-  line-height: 1.75;
+  font-size: var(--body-size);
+  line-height: var(--body-line);
   letter-spacing: -0.01em;
   font-weight: 400;
 }
@@ -70,6 +74,47 @@ a:hover { opacity: .85; }
   z-index: 9999;
 }
 .skip-link:focus{ left: 12px; }
+
+/* -----------------------------
+  Normalize body text (site-wide)
+------------------------------ */
+
+/* Default paragraphs */
+p { margin: 0 0 18px; font-size: 1em; line-height: inherit; }
+p:last-child { margin-bottom: 0; }
+
+/* Lists should match body size */
+ul, ol { font-size: 1em; line-height: inherit; }
+li { font-size: 1em; line-height: inherit; }
+
+/* Common “body text” containers: force them to inherit body size */
+.hero__lede,
+.section__subhead,
+.intro-block p,
+.approach-intro p,
+.approach-overview p,
+.story,
+.story p,
+.dimension p,
+.service p,
+.experience p,
+.cta-bar p,
+.outcome ul,
+.outcome ul li,
+.list,
+.styled-list,
+.styled-list li,
+.event__details ul li,
+.quote p,
+.quote--large p,
+.portrait__cta p {
+  font-size: 1em;
+  line-height: inherit;
+}
+
+/* Keep small helper text actually small */
+.small{ font-size: 18px; line-height: 1.65; }
+.muted{ color: var(--muted); }
 
 /* -----------------------------
   Topbar / Nav
@@ -264,9 +309,7 @@ a:hover { opacity: .85; }
 .hero__lede{
   margin: 0 0 22px;
   color: var(--muted);
-  font-size: 21px;
   max-width: 65ch;
-  line-height: 1.75;
 }
 
 .hero__lede strong {
@@ -298,9 +341,7 @@ a:hover { opacity: .85; }
 .quote p{
   margin: 0 0 10px;
   font-family: 'Crimson Pro', serif;
-  font-size: 22px;
   letter-spacing: -0.01em;
-  line-height: 1.5;
   font-weight: 500;
 }
 .quote footer{
@@ -401,12 +442,6 @@ h4 {
   line-height: 1.35;
 }
 
-p { margin: 0 0 18px; }
-p:last-child { margin-bottom: 0; }
-
-.small{ font-size: 18px; line-height: 1.65; }
-.muted{ color: var(--muted); }
-
 /* Keep form/UI text consistently sans-serif */
 label,
 input,
@@ -414,7 +449,6 @@ textarea,
 select {
   font-family: 'Darker Grotesque', system-ui, -apple-system, sans-serif;
 }
-
 
 /* -----------------------------
   Sections
@@ -434,8 +468,6 @@ select {
   margin: 0;
   color: var(--muted);
   max-width: 75ch;
-  font-size: 20px;
-  line-height: 1.7;
 }
 
 /* ---------
@@ -512,14 +544,12 @@ select {
   margin: 0;
   padding-left: 24px;
   color: var(--muted);
-  font-size: 20px;
 }
-.list li{ margin: 12px 0; line-height: 1.7; }
+.list li{ margin: 12px 0; }
 
 .styled-list {
   list-style: none;
   padding-left: 0;
-  font-size: 20px;
 }
 
 .styled-list li {
@@ -527,7 +557,6 @@ select {
   position: relative;
   margin: 14px 0;
   color: var(--text);
-  line-height: 1.7;
 }
 
 .styled-list li:before {
@@ -551,19 +580,9 @@ select {
   border: 1px solid rgba(255,255,255,.10);
 }
 
-.intro-block p {
-  font-size: 20px;
-  line-height: 1.75;
-}
-
 .approach-intro, .approach-overview {
   max-width: 85ch;
   margin-bottom: 32px;
-}
-
-.approach-intro p, .approach-overview p {
-  font-size: 20px;
-  line-height: 1.75;
 }
 
 .dimensions-title {
@@ -581,8 +600,6 @@ select {
 .story {
   max-width: 85ch;
   font-family: 'Crimson Pro', serif;
-  font-size: 22px;
-  line-height: 1.8;
   margin-bottom: 48px;
 }
 
@@ -598,10 +615,6 @@ select {
 .what-i-bring {
   max-width: 85ch;
   margin-top: 48px;
-}
-
-.what-i-bring .styled-list {
-  font-size: 20px;
 }
 
 .experience-title {
@@ -660,12 +673,10 @@ select {
 .outcome ul {
   margin: 0;
   padding-left: 20px;
-  font-size: 15px;
 }
 
 .outcome ul li {
   margin: 8px 0;
-  line-height: 1.6;
 }
 
 /* -----------------------------
@@ -702,8 +713,6 @@ select {
 
 .dimension p {
   color: var(--muted);
-  line-height: 1.75;
-  font-size: 20px;
 }
 
 /* -----------------------------
@@ -754,11 +763,6 @@ select {
   margin-bottom: 12px;
 }
 
-.service p {
-  font-size: 20px;
-  line-height: 1.7;
-}
-
 .pill{
   display:inline-block;
   margin-left: 10px;
@@ -795,11 +799,6 @@ select {
   text-align: center;
 }
 
-.cta-bar p {
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-
 /* -----------------------------
   Experience Grid
 ------------------------------ */
@@ -824,8 +823,6 @@ select {
 
 .experience p {
   color: var(--muted);
-  line-height: 1.75;
-  font-size: 20px;
 }
 
 /* -----------------------------
@@ -1039,8 +1036,6 @@ input::placeholder, textarea::placeholder{
   Portrait Section (near footer)
 ------------------------------ */
 
-
-
 .portrait-grid {
   display: grid;
   grid-template-columns: .9fr 1.1fr;
@@ -1080,11 +1075,6 @@ input::placeholder, textarea::placeholder{
   margin: 0;
 }
 
-.quote--large p {
-  font-size: 26px;
-  line-height: 1.5;
-}
-
 .portrait__cta {
   padding: 32px;
   border-radius: var(--radius);
@@ -1093,17 +1083,12 @@ input::placeholder, textarea::placeholder{
   text-align: center;
 }
 
-.portrait__cta p {
-  margin-bottom: 24px;
-  font-size: 19px;
-}
-
 @media (max-width: 920px) {
   .portrait-grid {
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  
+
   .portrait__image {
     max-width: 380px;
   }
@@ -1183,7 +1168,7 @@ input::placeholder, textarea::placeholder{
   }
   .grid-2{ grid-template-columns: 1fr; }
   .contact{ grid-template-columns: 1fr; }
-  
+
   .hero--landscape {
     min-height: 70vh;
     padding: 100px 0 60px;
@@ -1192,55 +1177,51 @@ input::placeholder, textarea::placeholder{
 
 @media (max-width: 768px){
   body { font-size: 20px; }
-  
+
   .section { padding: 56px 0; }
-  
+
   .hero { padding: 56px 0 36px; }
-  
+
   .hero--landscape {
     min-height: 60vh;
     padding: 80px 0 50px;
   }
-  
+
   .hero__title {
     font-size: clamp(36px, 8vw, 52px);
   }
-  
-  .hero__lede {
-    font-size: 18px;
-  }
-  
+
   .container {
     width: min(var(--max), calc(100% - 32px));
   }
-  
+
   .hero__image {
     max-width: 100%;
   }
-  
+
   .media-placeholder{ min-height: 320px; }
   .media-placeholder--short{ min-height: 240px; }
-  
+
   .grid-3{ grid-template-columns: 1fr; }
-  
+
   .outcomes__grid {
     grid-template-columns: 1fr;
   }
-  
+
   .services-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .event__meta {
     flex-direction: column;
     gap: 8px;
   }
-  
+
   .footer__inner {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .footer__copy {
     text-align: left;
   }
@@ -1274,7 +1255,7 @@ input::placeholder, textarea::placeholder{
     scroll-behavior: auto !important;
     animation: none !important;
   }
-  
+
   .fade-in {
     opacity: 1 !important;
     transform: none !important;
@@ -1298,3 +1279,13 @@ body{
   /* Optional but helps: prevents “moving gradient” feel while scrolling */
   background-attachment: fixed, fixed !important;
 }
+
+/* Gentle pull-quote emphasis */
+.quote p { 
+  font-size: 1.1em;   /* ~10% larger than body */
+  line-height: 1.55;
+}
+.quote--large p {
+  font-size: 3.15em;  /* optional: slightly more, but not 26px */
+}
+
