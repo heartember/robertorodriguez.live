@@ -704,19 +704,30 @@ select {
 }
 
 
+/* restore the base sizing (keep this) */
 .portrait__image--small{
   width: 100%;
-  max-width: 230px;        /* desktop / tablet size */
+  max-width: 230px;
   border-radius: 22px;
   box-shadow: var(--shadow-soft);
 }
 
+/* you currently bump to 300px at <=900px — keep if you want for tablets */
+@media (max-width: 900px){
+  .portrait__image--small{
+    max-width: 300px;
+  }
+}
 
+/* BUT on phones, force it smaller */
 @media (max-width: 768px){
   .portrait__image--small{
+    max-width: 220px;         /* pick 200–240 to taste */
+    width: min(220px, 70vw);  /* prevents it from blowing up */
     box-shadow: 0 8px 20px rgba(0,0,0,.25);
   }
 }
+
 
 
 .what-i-bring__list{
