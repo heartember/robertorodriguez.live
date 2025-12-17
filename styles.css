@@ -470,6 +470,24 @@ select {
   max-width: 75ch;
 }
 
+/* Working Together illustration */
+.work-illustration{
+  margin: 28px auto 36px;
+  max-width: 980px;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: var(--shadow-soft);
+  background: rgba(255,255,255,.03);
+}
+
+.work-illustration__img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* ---------
   Two-column content + media
   (fixes image alignment; avoids float/layout glitches)
