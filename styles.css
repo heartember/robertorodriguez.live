@@ -75,6 +75,11 @@ a:hover { opacity: .85; }
 }
 .skip-link:focus{ left: 12px; }
 
+html{
+  scroll-padding-top: 90px;
+}
+
+
 /* -----------------------------
   Normalize body text (site-wide)
 ------------------------------ */
@@ -121,12 +126,18 @@ li { font-size: 1em; line-height: inherit; }
 ------------------------------ */
 
 .topbar{
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
+  left: 0;
+  right: 0;
+  z-index: 9999;
   background: rgba(6,10,9,.85);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
+}
+/* Offset page content for fixed header */
+main{
+  padding-top: 80px; /* match header height */
 }
 
 .topbar__inner{
