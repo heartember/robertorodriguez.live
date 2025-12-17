@@ -567,6 +567,7 @@
         if (target) {
           e.preventDefault();
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.pushState(null, "", href);
         }
       }
     });
