@@ -239,11 +239,10 @@ main{
   .nav-toggle{ display: inline-block; }
 
   .nav{
-    position: absolute;
-    top: 100%;
-    margin-top: 8px;
-    right: 24px;
-    left: 24px;
+    position: fixed;          /* ✅ key change */
+    top: 80px;                /* match your header height */
+    left: 16px;
+    right: 16px;
 
     display: none;
     flex-direction: column;
@@ -257,7 +256,7 @@ main{
     box-shadow: var(--shadow);
 
     font-size: 17px;
-    z-index: 1000;
+    z-index: 10000;           /* ✅ above header + everything */
   }
 
   .nav a{
@@ -267,9 +266,9 @@ main{
     font-weight: 600;
   }
 
-  .nav--open{ display: flex; }
-  .brand{ min-width: 0; }
+  .nav.nav--open{ display: flex; }  /* ✅ slightly stronger selector */
 }
+
 
 /* -----------------------------
   Hero
