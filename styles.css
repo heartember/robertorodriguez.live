@@ -532,52 +532,26 @@ select {
 }
 
 /* Override the generic media-break image cap for the diagram */
-.media-break .diagram__img{
+.media-break {
   max-width: 1000px;
 }
 
 /* Diagrammatic mandala (Approach) */
-.diagram{
-  margin: 0;
+/* Inline diagram under section heading */
+.diagram--inline{
+  margin: 32px auto 48px;
   text-align: center;
 }
 
-.diagram__img{
+.diagram--inline .diagram__img{
   width: 100%;
-  max-width: 1000px;   /* was ~420 */
+  max-width: 980px;   /* wide, readable */
   height: auto;
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: var(--shadow-soft);
+  background: rgba(255,255,255,.03);
 }
-
-/* Keep it anchored while reading */
-.dimensions-with-image{
-  align-items: start;
-  grid-template-columns: 1.1fr 1fr; /* gives the diagram more room */
-}
-
-.dimensions-with-image .diagram{
-  position: sticky;
-  top: 120px; /* clears sticky topbar */
-  align-self: start;
-}
-
-/* Stack on smaller screens */
-@media (max-width: 1024px){
-  .dimensions-with-image,
-  .story-with-image{
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .media-break img,
-  .diagram__img{
-    max-width: 900px; /* a bit larger on mobile/tablet */
-  }
-
-  .dimensions-with-image .diagram{
-    position: static;
-  }
-}
-
 .grid-2{
   display: grid;
   grid-template-columns: 1fr 1fr;
