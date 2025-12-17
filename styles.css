@@ -484,23 +484,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Hero-only: subtle ember gradient emphasis */
-.hero__title .ember-gradient{
-  display: inline-block;
-
+/* Ember gradient text (same technique as the old aqua .accent) */
+.ember-gradient{
   background: linear-gradient(
-    110deg,
-    #e2b66a 0%,
-    #c9933a 45%,
-    #9f6a1f 100%
+    140deg,
+    #e2b66a,   /* lighter ember */
+    #c9933a,
+    #9f6a1f    /* deeper earthy ember */
   );
 
   -webkit-background-clip: text;
   background-clip: text;
 
-  /* This is the key piece for Chrome/Safari */
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; /* key for Safari/Chrome */
   color: transparent;
+
+  display: inline-block; /* avoids occasional clipping weirdness */
 }
+
 
 
 /* Keep navigation and UI elements in sans-serif */
