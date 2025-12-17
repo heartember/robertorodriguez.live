@@ -120,10 +120,6 @@ li { font-size: 1em; line-height: inherit; }
   Topbar / Nav
 ------------------------------ */
 
-/* -----------------------------
-  Topbar / Nav
------------------------------- */
-
 .topbar{
   position: sticky;
   top: 0;
@@ -233,7 +229,8 @@ li { font-size: 1em; line-height: inherit; }
 
   .nav{
     position: absolute;
-    top: 70px;
+    top: 100%;
+    margin-top: 8px;
     right: 24px;
     left: 24px;
 
@@ -1477,6 +1474,4 @@ body{
 
 .section--closing .cta-bar{
   margin-top: 24px;
-}
-
 }
