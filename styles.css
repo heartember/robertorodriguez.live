@@ -350,6 +350,7 @@ li { font-size: 1em; line-height: inherit; }
   font-family: 'Crimson Pro', serif;
   letter-spacing: -0.01em;
   font-weight: 500;
+  font-size: 1.25em
 }
 .quote footer{
   color: var(--faint);
