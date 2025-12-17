@@ -1198,17 +1198,6 @@ input::placeholder, textarea::placeholder{
   border: 1px solid rgba(255,255,255,.10);
 }
 
-.portrait__image{
-  width: 100%;
-  max-width: 450px;
-  height: auto;
-  border-radius: 28px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(255,255,255,.16);
-  display: block;
-  margin: 0;
-}
-
 .portrait__caption{
   color: var(--faint);
   font-size: 15px;
@@ -1216,15 +1205,6 @@ input::placeholder, textarea::placeholder{
   font-style: italic;
   margin: 0;
 }
-
-@media (max-width: 920px){
-  .portrait__image{ max-width: 380px; }
-}
-
-@media (max-width: 640px){
-  .portrait__image{ max-width: 280px; }
-}
-
 
 /* Footer */
 .footer{
