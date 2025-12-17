@@ -336,25 +336,32 @@ li { font-size: 1em; line-height: inherit; }
   padding-left: 16px;
 }
 
-.quote{
-  margin: 40px 0 0;
-  padding: 24px 26px;
-  border-radius: var(--radius);
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: var(--shadow-soft);
-  text-align: center;
-}
 .quote p{
   margin: 0 0 10px;
   font-family: 'Crimson Pro', serif;
   letter-spacing: -0.01em;
   font-weight: 500;
-  font-size: 1.25em
+  font-size: 1.15em;
+  line-height: 1.55;
 }
+.quote--large p{
+  font-size: 1.3em;
+  line-height: 1.5;
+  padding: 28px 30px;
+}
+
+.quote p{
+  margin: 0 0 10px;
+  font-family: 'Crimson Pro', serif;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  font-size: 1.15em;
+  line-height: 1.55;
+}
+
 .quote footer{
   color: var(--faint);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* Image placeholders */
