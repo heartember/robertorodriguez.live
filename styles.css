@@ -173,15 +173,19 @@ li { font-size: 1em; line-height: inherit; }
   display: flex;
   align-items: center;
   gap: 20px;
-  font-size: 15px;
+
+  font-size: 17px;
+  font-weight: 600;
+
   color: var(--muted);
-  font-weight: 500;
 }
+
 .nav a{
-  padding: 9px 11px;
-  border-radius: 11px;
+  padding: 12px 14px;
+  border-radius: 12px;
   border: 1px solid transparent;
 }
+
 .nav a:hover{
   color: var(--text);
   border-color: rgba(255,255,255,.12);
@@ -191,8 +195,10 @@ li { font-size: 1em; line-height: inherit; }
   color: #07110e;
   background: var(--accent);
   border-color: rgba(0,0,0,.14);
-  font-weight: 600;
+  font-weight: 700;
+  padding: 12px 16px;
 }
+
 .nav__cta:hover{
   background: rgba(183,243,209,.90);
   opacity: 1;
@@ -1094,6 +1100,13 @@ select {
   background: rgba(255,255,255,.08);
 }
 
+@media (max-width: 768px){
+  .btn{
+    font-size: 19.5px;
+    letter-spacing: 0.015em;
+    padding: 18px 26px;
+  }
+}
 .text-link{
   color: var(--accent);
   font-weight: 600;
@@ -1358,8 +1371,13 @@ input::placeholder, textarea::placeholder{
     background: rgba(6,10,9,.96);
     border: 1px solid rgba(255,255,255,.16);
     box-shadow: var(--shadow);
+    font-size: 17px;
   }
-  .nav a{ padding: 14px 14px; }
+  
+  .nav a{
+    padding: 16px 16px;
+    font-weight: 600;
+  }
   .nav--open{ display: flex; }
   .brand{ min-width: 0; }
 }
