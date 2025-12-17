@@ -1221,6 +1221,10 @@ input::placeholder, textarea::placeholder{
   .portrait__image{ max-width: 380px; }
 }
 
+@media (max-width: 640px){
+  .portrait__image{ max-width: 280px; }
+}
+
 
 /* Footer */
 .footer{
@@ -1440,6 +1444,5 @@ body{
 .section--closing .cta-bar{
   margin-top: 24px;
 }
-
-
-
+  margin-top: 24px;
+}
