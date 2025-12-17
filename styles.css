@@ -530,8 +530,6 @@ select {
   max-width: 440px;
   height: auto;
 }
-
-/* Diagrammatic mandala (Approach) */
 /* Diagrammatic mandala (Approach) */
 .diagram{
   margin: 0;
@@ -540,7 +538,7 @@ select {
 
 .diagram__img{
   width: 100%;
-  max-width: 700px;   /* was ~420 */
+  max-width: 1000px;   /* was ~420 */
   height: auto;
 }
 
@@ -565,7 +563,7 @@ select {
 
   .media-break img,
   .diagram__img{
-    max-width: 720px; /* a bit larger on mobile/tablet */
+    max-width: 900px; /* a bit larger on mobile/tablet */
   }
 
   .dimensions-with-image .diagram{
