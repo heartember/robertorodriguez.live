@@ -501,12 +501,41 @@ select {
   align-items: start;
 }
 
+/* Four Dimensions diagram (inline, like Upcoming Events hero) */
+.diagram--inline{
+  margin: 28px auto 44px;
+  max-width: 980px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+}
+
+.diagram--inline .diagram__img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+}
+
+
 .media-break{
   margin: 0;              /* grid handles spacing */
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
+/* Media alignment helper (NO sizing constraints) */
+.media-break img{
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+
 .grid-2{
   display: grid;
   grid-template-columns: 1fr 1fr;
