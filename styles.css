@@ -1083,6 +1083,10 @@ input::placeholder, textarea::placeholder{
   text-align: center;
 }
 
+.portrait-section {
+  margin-bottom: 64px; /* breathing room before the long story text */
+}
+
 @media (max-width: 920px) {
   .portrait-grid {
     grid-template-columns: 1fr;
