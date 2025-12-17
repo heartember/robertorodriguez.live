@@ -346,10 +346,13 @@ li { font-size: 1em; line-height: inherit; }
   text-align: center;
 }
 
-.quote--large p{
-  font-size: 1.3em;
-  line-height: 1.5;
+.quote--large{
   padding: 28px 30px;
+}
+
+.quote--large p{
+  font-size: 1.15em;   /* or 1.2em if you want it bigger */
+  line-height: 1.55;
 }
 
 .quote p{
