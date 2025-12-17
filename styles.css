@@ -502,25 +502,32 @@ select {
 }
 
 /* Four Dimensions diagram (inline, like Upcoming Events hero) */
+
+/* Diagram: tight frame (like events hero), no extra panel */
 .diagram--inline{
   margin: 28px auto 44px;
   max-width: 980px;
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.03);
+
+  /* remove any inherited/panel feel */
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .diagram--inline .diagram__img{
   display: block;
   width: 100%;
   height: auto;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  background: none;
+
+  /* give the image the “events hero” treatment */
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255,255,255,.12);
 }
+
 
 
 .media-break{
