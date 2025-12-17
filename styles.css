@@ -712,23 +712,16 @@ select {
   box-shadow: var(--shadow-soft);
 }
 
-/* you currently bump to 300px at <=900px — keep if you want for tablets */
-@media (max-width: 900px){
-  .portrait__image--small{
-    max-width: 300px;
-  }
-}
-
-/* BUT on phones, force it smaller */
 @media (max-width: 768px){
   .portrait__image--small{
-    max-width: 220px;         /* pick 200–240 to taste */
-    width: min(220px, 70vw);  /* prevents it from blowing up */
-    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    width: 150px;
+    max-width: 150px;
+    height: auto;
+
+    border-radius: 18px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.25);
   }
 }
-
-
 
 .what-i-bring__list{
   margin: 0;
