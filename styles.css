@@ -569,10 +569,17 @@ select {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  .media-break img{
+
+  .media-break img,
+  .diagram__img{
     max-width: 520px;
   }
+
+  .dimensions-with-image .diagram{
+    position: static;
+  }
 }
+
 
 .grid-2{
   display: grid;
