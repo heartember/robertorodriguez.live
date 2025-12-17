@@ -530,6 +530,12 @@ select {
   max-width: 440px;
   height: auto;
 }
+
+/* Override the generic media-break image cap for the diagram */
+.media-break .diagram__img{
+  max-width: 1000px;
+}
+
 /* Diagrammatic mandala (Approach) */
 .diagram{
   margin: 0;
@@ -545,6 +551,7 @@ select {
 /* Keep it anchored while reading */
 .dimensions-with-image{
   align-items: start;
+  grid-template-columns: 1.1fr 1fr; /* gives the diagram more room */
 }
 
 .dimensions-with-image .diagram{
